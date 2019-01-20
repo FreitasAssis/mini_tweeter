@@ -10,5 +10,6 @@ class MyUser(User):
     following = models.ManyToManyField(
         'self',
         related_name='followers',
-        symmetrical=False
+        symmetrical=False,
+        blank=True
     )
